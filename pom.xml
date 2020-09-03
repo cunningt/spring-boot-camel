@@ -33,6 +33,7 @@
 
         <!-- configure the Fuse version you want to use here -->
         <fuse.bom.version>7.6.0.fuse-sb2-760028-redhat-00001</fuse.bom.version>
+        <jkube.generator.from>fuse7/fuse-java-openshift:1.6</jkube.generator.from>
 
         <!-- maven plugin versions -->
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
@@ -173,9 +174,9 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.jboss.redhat-fuse</groupId>
-                        <artifactId>fabric8-maven-plugin</artifactId>
-                        <version>${fuse.bom.version}</version>
+                        <groupId>org.eclipse.jkube</groupId>
+                        <artifactId>openshift-maven-plugin</artifactId>
+                        <version>1.0.0-rc-1</version>
                         <executions>
                             <execution>
                                 <goals>
@@ -190,7 +191,4 @@
         </profile>
     </profiles>
 </project>
-<!--
-Modified by POM Manipulation Extension for Maven 3.8.2 ( SHA: 85be114a ) 
--->
 
